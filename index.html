@@ -6,84 +6,131 @@
   <title>📽️ مكتبة الفيديو العربي المجاني</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       padding: 0;
       font-family: 'Cairo', sans-serif;
-      background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+      background-color: #f5f7fa;
       color: #1f2937;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
       direction: rtl;
     }
 
-    .container {
-      width: 90%;
-      max-width: 480px;
-      background: #ffffff;
-      padding: 24px;
-      border-radius: 20px;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-      text-align: right;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .profile-img {
-      width: 100%;
-      height: 220px;
-      border-radius: 14px;
-      object-fit: cover;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-
-    h1 {
-      font-size: 22px;
-      color: #0f172a;
-      margin-bottom: 16px;
+    header {
+      background: linear-gradient(to left, #0088cc, #005f7f);
+      color: white;
+      padding: 30px 20px;
       text-align: center;
     }
 
-    p {
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    header p {
       font-size: 16px;
-      line-height: 1.7;
-      margin-bottom: 18px;
-      color: #374151;
+      margin: 0;
     }
 
-    ul {
-      margin: 0 0 20px 0;
-      padding: 0 18px;
-      list-style: none;
+    .main {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 30px 20px;
     }
 
-    li {
-      margin-bottom: 12px;
-      font-size: 15px;
+    .video-preview {
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%;
+      background: #000 url('https://i.imgur.com/OYQhZ3N.png') center/cover no-repeat;
+      border-radius: 16px;
+      margin-bottom: 30px;
+    }
+
+    .video-preview::after {
+      content: '▶';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      color: rgba(255, 255, 255, 0.8);
+      pointer-events: none;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .features {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
     }
 
-    li::before {
-      content: "✅";
+    .feature-card {
+      flex: 1 1 calc(50% - 16px);
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+      font-size: 15px;
+    }
+
+    .feature-card::before {
+      content: "✔️";
       margin-left: 8px;
-      font-size: 16px;
+      color: #00bcd4;
+    }
+
+    .recommendations {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .recommendation {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+
+    .recommendation img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .recommendation p {
+      margin: 10px;
+      font-size: 14px;
+    }
+
+    .cta-section {
+      text-align: center;
+      background-color: #e0f7fa;
+      padding: 30px 20px;
+      border-radius: 16px;
     }
 
     .cta-btn {
-      display: block;
-      text-align: center;
+      display: inline-block;
       background-color: #00bcd4;
       color: white;
       font-size: 18px;
-      padding: 14px 20px;
+      padding: 14px 30px;
       border: none;
       border-radius: 10px;
       text-decoration: none;
       transition: background-color 0.3s ease;
+      margin-top: 10px;
       font-weight: bold;
     }
 
@@ -91,27 +138,68 @@
       background-color: #0097a7;
     }
 
-    @media (max-width: 400px) {
-      .profile-img {
-        height: 160px;
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      .feature-card {
+        flex: 1 1 100%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- 阿拉伯女性形象图片示例（你可替换为你自己的图） -->
-    <img src="https://i.pinimg.com/736x/5a/65/87/5a6587e17d98d75956868f2a5f689792.jpg" alt="امرأة عربية" class="profile-img" />
-    
-    <h1>🎬 مكتبة الفيديو العربي المجاني</h1>
-    <p>احصل على أفضل مكتبة فيديو عربي بدون إعلانات، تشمل أفلام، مسلسلات وروابط تحميل مباشرة.</p>
-    <ul>
-      <li>أفلام ومسلسلات بجودة عالية</li>
-      <li>دون إعلانات مزعجة</li>
-      <li>روابط تحميل مباشرة</li>
-      <li>تحديثات مستمرة ومجانية</li>
-    </ul>
-    <a class="cta-btn" href="https://t.me/XOOXQR" target="_blank" rel="nofollow noopener">🚀 انقر للدخول الآن</a>
-  </div>
+
+  <header>
+    <h1>📽️ مكتبة الفيديو العربي المجاني</h1>
+    <p>اكتشف أفضل محتوى فيديو مجاني باللغة العربية، بلا إعلانات مزعجة</p>
+  </header>
+
+  <section class="main">
+    <div class="video-preview"></div>
+
+    <h2 class="section-title">ما الذي نقدمه؟</h2>
+    <div class="features">
+      <div class="feature-card">أفلام ومسلسلات بجودة عالية</div>
+      <div class="feature-card">روابط تحميل مباشرة وآمنة</div>
+      <div class="feature-card">مشاهدة بدون إعلانات مزعجة</div>
+      <div class="feature-card">تحديثات يومية لأحدث الإصدارات</div>
+    </div>
+
+    <h2 class="section-title">📺 اقتراحات للمشاهدة</h2>
+    <div class="recommendations">
+      <div class="recommendation">
+        <img src="https://i.imgur.com/rK4t8OE.jpg" alt="فيلم عربي 1">
+        <p>فيلم درامي مميز</p>
+      </div>
+      <div class="recommendation">
+        <img src="https://i.imgur.com/EEt8x5e.jpg" alt="مسلسل عربي">
+        <p>مسلسل مشوق</p>
+      </div>
+      <div class="recommendation">
+        <img src="https://i.imgur.com/WPqmw2S.jpg" alt="فيلم كوميدي">
+        <p>كوميديا عائلية</p>
+      </div>
+      <div class="recommendation">
+        <img src="https://i.imgur.com/VJ7AiOe.jpg" alt="فيلم تشويقي">
+        <p>إثارة وغموض</p>
+      </div>
+    </div>
+
+    <div class="cta-section">
+      <h2>🚀 جاهز للمشاهدة؟</h2>
+      <p>انضم إلى قناتنا الحصرية على تيليجرام واحصل على دليل المحتوى المجاني الآن:</p>
+      <a class="cta-btn" href="https://t.me/XOOXQR" target="_blank" rel="nofollow noopener">انقر هنا للدخول</a>
+    </div>
+  </section>
+
+  <footer>
+    جميع الحقوق محفوظة © 2025 - دليل الفيديو العربي
+  </footer>
+
 </body>
 </html>
