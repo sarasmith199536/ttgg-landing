@@ -3,93 +3,146 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>📺 مكتبة الفيديو العربي المجاني</title>
+  <title>📽️ مكتبة الفيديو العربي المجاني</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
+      padding: 0;
       font-family: 'Cairo', sans-serif;
-      background-color: #f7fafc;
-      color: #1a202c;
+      background-color: #f5f7fa;
+      color: #1f2937;
       direction: rtl;
     }
+
     header {
-      background: linear-gradient(to left, #1e3a8a, #2563eb);
-      color: white;
+      background-color: #ffffff;
+      padding: 0;
       text-align: center;
-      padding: 40px 20px;
-    }
-    header h1 {
-      font-size: 28px;
-      margin: 0 0 10px;
-    }
-    header p {
-      font-size: 16px;
     }
 
-    .container {
+    .hero-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      display: block;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin: 10px 0 5px;
+    }
+
+    header p {
+      font-size: 16px;
+      margin: 0 0 20px;
+      color: #374151;
+    }
+
+    .main {
       max-width: 960px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 30px 20px;
     }
 
     .video-preview {
       position: relative;
+      width: 100%;
       padding-top: 56.25%;
-      background: #000 url('https://cdn.discordapp.com/attachments/1364839103383994419/1382568425871769740/lanjing3308_Middle_Eastern_woman_close-up_porcelain_skin_with_p_e56faf77-fa4b-4dbb-9f05-27762387f2b6.png?ex=684ba0af&is=684a4f2f&hm=2b88bd55a74f53cceaafe5c551445259a95caee96220631fd39623af6c6e3e55&') center/contain no-repeat;
-      border-radius: 12px;
+      background: #000 url('https://cdn.discordapp.com/attachments/1364839103383994419/1382608735691608194/F1.jpg?ex=684bc63a&is=684a74ba&hm=567532f23874451f822b7f69a2e8beaba71283c4bcdc3b282e844ac46295a0ff&') center/cover no-repeat;
+      border-radius: 16px;
       margin-bottom: 30px;
     }
 
+    .video-preview::after {
+      content: '▶';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 60px;
+      color: rgba(255, 255, 255, 0.8);
+      pointer-events: none;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
     .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      display: flex;
+      flex-wrap: wrap;
       gap: 16px;
       margin-bottom: 40px;
     }
-    .feature {
+
+    .feature-card {
+      flex: 1 1 calc(50% - 16px);
       background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      text-align: center;
-      font-size: 16px;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
+      font-size: 15px;
     }
 
-    .gallery {
+    .feature-card::before {
+      content: "✔️";
+      margin-left: 8px;
+      color: #00bcd4;
+    }
+
+    .recommendations {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 16px;
       margin-bottom: 40px;
     }
-    .gallery img {
-      width: 100%;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 10px;
-      border: 1px solid #e2e8f0;
+
+    .recommendation {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+      text-align: center;
     }
 
-    .cta {
+    .recommendation img {
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+    }
+
+    .recommendation p {
+      margin: 10px;
+      font-size: 14px;
+    }
+
+    .cta-section {
       text-align: center;
-      background-color: #e0f2fe;
+      background-color: #e0f7fa;
       padding: 30px 20px;
-      border-radius: 12px;
+      border-radius: 16px;
     }
-    .cta a {
+
+    .cta-btn {
       display: inline-block;
-      margin-top: 12px;
-      background-color: #2563eb;
+      background-color: #00bcd4;
       color: white;
-      padding: 12px 28px;
-      border-radius: 8px;
-      text-decoration: none;
       font-size: 18px;
-      transition: background 0.3s;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      font-weight: bold;
     }
-    .cta a:hover {
-      background-color: #1e40af;
+
+    .cta-btn:hover {
+      background-color: #0097a7;
     }
 
     footer {
@@ -98,43 +151,62 @@
       font-size: 13px;
       color: #6b7280;
     }
+
+    @media (max-width: 600px) {
+      .feature-card {
+        flex: 1 1 100%;
+      }
+    }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>📺 مكتبة الفيديو العربي المجاني</h1>
-    <p>استمتع بمشاهدة الأفلام والمسلسلات بدون إعلانات وبدون دفع</p>
+    <img class="hero-img" src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608715932368977/Top1.jpg?ex=684bc635&is=684a74b5&hm=bfcc2245da00d6c176d4732edced1987715fa407c6badef06c9edc94b8665484&" alt="صورة امرأة عربية">
+    <h1>📽️ مكتبة الفيديو العربي المجاني</h1>
+    <p>اكتشف أفضل محتوى فيديو مجاني باللغة العربية، بلا إعلانات مزعجة</p>
   </header>
 
-  <div class="container">
-
+  <section class="main">
     <div class="video-preview"></div>
 
+    <h2 class="section-title">ما الذي نقدمه؟</h2>
     <div class="features">
-      <div class="feature">🎬 محتوى عربي جديد يوميًا</div>
-      <div class="feature">🔗 روابط تحميل مباشرة</div>
-      <div class="feature">📱 متوافق مع الجوال</div>
-      <div class="feature">⏯️ تشغيل سريع بدون إعلانات</div>
+      <div class="feature-card">أفلام ومسلسلات بجودة عالية</div>
+      <div class="feature-card">روابط تحميل مباشرة وآمنة</div>
+      <div class="feature-card">مشاهدة بدون إعلانات مزعجة</div>
+      <div class="feature-card">تحديثات يومية لأحدث الإصدارات</div>
     </div>
 
-    <div class="gallery">
-      <img src="https://cdn.pixabay.com/photo/2021/01/05/06/36/woman-5890402_1280.jpg" alt="سيدة عربية">
-      <img src="https://cdn.pixabay.com/photo/2017/06/20/19/22/people-2425127_1280.jpg" alt="مشاهدة محتوى">
-      <img src="https://cdn.pixabay.com/photo/2021/06/02/19/37/woman-6304031_1280.jpg" alt="مقدمة برامج">
-      <img src="https://cdn.pixabay.com/photo/2018/03/10/19/55/people-3218666_1280.jpg" alt="امرأة ترتدي الحجاب">
+    <h2 class="section-title">📺 اقتراحات للمشاهدة</h2>
+    <div class="recommendations">
+      <div class="recommendation">
+        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608736560091158/S1_1.jpg?ex=684bc63a&is=684a74ba&hm=abddf1ab424cedf028065cc7b13b656843d779fa39c2bf415eb96c80bab1616e&" alt="فيلم 1">
+        <p>فيلم درامي مميز</p>
+      </div>
+      <div class="recommendation">
+        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608736845168791/S1_2.jpg?ex=684bc63a&is=684a74ba&hm=c56cf60351372bf57704db4a658b301c1457c057bb96233a9252728d0ed62c3f&" alt="فيلم 2">
+        <p>مسلسل مشوق</p>
+      </div>
+      <div class="recommendation">
+        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608737306546196/S1_3.jpg?ex=684bc63a&is=684a74ba&hm=aaa0550d1c28daf9df98183d55407c45465d2fd4496818ad9e4962bd7f032751&" alt="فيلم 3">
+        <p>كوميديا عائلية</p>
+      </div>
+      <div class="recommendation">
+        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608737579040910/S1_4.jpg?ex=684bc63a&is=684a74ba&hm=e862600b387168bc670ef7cc8b94ce90f664cc33a76eab5b6c7b85f652299bcd&" alt="فيلم 4">
+        <p>إثارة وغموض</p>
+      </div>
     </div>
 
-    <div class="cta">
-      <h2>🚀 هل أنت مستعد لبدء المشاهدة؟</h2>
-      <p>انضم إلى قناتنا على تيليجرام للحصول على الوصول الكامل الآن</p>
-      <a href="https://t.me/XOOXQR" target="_blank" rel="noopener noreferrer">انقر للدخول</a>
+    <div class="cta-section">
+      <h2>🚀 جاهز للمشاهدة؟</h2>
+      <p>انضم إلى قناتنا الحصرية على تيليجرام واحصل على دليل المحتوى المجاني الآن:</p>
+      <a class="cta-btn" href="https://t.me/XOOXQR" target="_blank" rel="nofollow noopener">انقر هنا للدخول</a>
     </div>
-
-  </div>
+  </section>
 
   <footer>
-    جميع الحقوق محفوظة © 2025 - مكتبة الفيديو العربي
+    جميع الحقوق محفوظة © 2025 - دليل الفيديو العربي
   </footer>
 
 </body>
