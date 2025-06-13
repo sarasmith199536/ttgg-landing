@@ -15,59 +15,50 @@
       color: #1f2937;
       direction: rtl;
     }
-
     header {
       background-color: #ffffff;
       padding: 0;
       text-align: center;
     }
-
     .hero-img {
       width: 100%;
       max-height: 300px;
       object-fit: cover;
       display: block;
     }
-
     header h1 {
       font-size: 28px;
       margin: 10px 0 5px;
     }
-
     header p {
       font-size: 16px;
       margin: 0 0 20px;
       color: #374151;
     }
-
     .main {
       max-width: 960px;
       margin: 0 auto;
       padding: 30px 20px;
     }
-
     .video-preview {
       position: relative;
       width: 100%;
       padding-top: 56.25%;
-      background: #000 url('https://cdn.discordapp.com/attachments/1364839103383994419/1382608735691608194/F1.jpg?ex=684bc63a&is=684a74ba&hm=567532f23874451f822b7f69a2e8beaba71283c4bcdc3b282e844ac46295a0ff&') center/cover no-repeat;
+      background: #000 url('https://cdn.discordapp.com/attachments/1364839103383994419/1382608735691608194/F1.jpg') center/cover no-repeat;
       border-radius: 16px;
       margin-bottom: 30px;
     }
-
     .section-title {
       font-size: 22px;
       margin-bottom: 20px;
       color: #0f172a;
     }
-
     .features {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
       margin-bottom: 40px;
     }
-
     .feature-card {
       flex: 1 1 calc(50% - 16px);
       background: white;
@@ -76,20 +67,17 @@
       box-shadow: 0 6px 12px rgba(0, 0, 0, 0.06);
       font-size: 15px;
     }
-
     .feature-card::before {
       content: "✔️";
       margin-left: 8px;
       color: #00bcd4;
     }
-
     .recommendations {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
       gap: 16px;
       margin-bottom: 40px;
     }
-
     .recommendation {
       background: white;
       border-radius: 12px;
@@ -97,25 +85,21 @@
       box-shadow: 0 6px 12px rgba(0,0,0,0.08);
       text-align: center;
     }
-
     .recommendation img {
       width: 100%;
       height: 100px;
       object-fit: cover;
     }
-
     .recommendation p {
       margin: 10px;
       font-size: 14px;
     }
-
     .cta-section {
       text-align: center;
       background-color: #e0f7fa;
       padding: 30px 20px;
       border-radius: 16px;
     }
-
     .cta-btn {
       display: inline-block;
       background-color: #00bcd4;
@@ -128,19 +112,17 @@
       transition: background-color 0.3s ease;
       margin-top: 10px;
       font-weight: bold;
+      cursor: pointer;
     }
-
     .cta-btn:hover {
       background-color: #0097a7;
     }
-
     footer {
       text-align: center;
       padding: 20px;
       font-size: 13px;
       color: #6b7280;
     }
-
     @media (max-width: 600px) {
       .feature-card {
         flex: 1 1 100%;
@@ -151,7 +133,7 @@
 <body>
 
   <header>
-    <img class="hero-img" src="https://cdn.discordapp.com/attachments/1364839103383994419/1382613664774754395/Top1-1.jpg?ex=684bcad1&is=684a7951&hm=6c58991dbf6a187c586724ca4f6c8f4a4c8df05629ed2255118dfb8e1a9d3eb6&" alt="صورة امرأة عربية">
+    <img class="hero-img" src="https://cdn.discordapp.com/attachments/1364839103383994419/1382613664774754395/Top1-1.jpg" alt="صورة امرأة عربية">
     <h1>📽️ مكتبة الفيديو العربي المجاني</h1>
     <p>اكتشف أفضل محتوى فيديو مجاني باللغة العربية، بلا إعلانات مزعجة</p>
   </header>
@@ -170,33 +152,41 @@
     <h2 class="section-title">📺 اقتراحات للمشاهدة</h2>
     <div class="recommendations">
       <div class="recommendation">
-        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608736560091158/S1_1.jpg?ex=684bc63a&is=684a74ba&hm=abddf1ab424cedf028065cc7b13b656843d779fa39c2bf415eb96c80bab1616e&" alt="فيلم 1">
+        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608736560091158/S1_1.jpg" alt="فيلم 1">
         <p>فيلم درامي مميز</p>
       </div>
       <div class="recommendation">
-        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608736845168791/S1_2.jpg?ex=684bc63a&is=684a74ba&hm=c56cf60351372bf57704db4a658b301c1457c057bb96233a9252728d0ed62c3f&" alt="فيلم 2">
+        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608736845168791/S1_2.jpg" alt="فيلم 2">
         <p>مسلسل مشوق</p>
       </div>
       <div class="recommendation">
-        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608737306546196/S1_3.jpg?ex=684bc63a&is=684a74ba&hm=aaa0550d1c28daf9df98183d55407c45465d2fd4496818ad9e4962bd7f032751&" alt="فيلم 3">
+        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608737306546196/S1_3.jpg" alt="فيلم 3">
         <p>كوميديا عائلية</p>
       </div>
       <div class="recommendation">
-        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608737579040910/S1_4.jpg?ex=684bc63a&is=684a74ba&hm=e862600b387168bc670ef7cc8b94ce90f664cc33a76eab5b6c7b85f652299bcd&" alt="فيلم 4">
+        <img src="https://cdn.discordapp.com/attachments/1364839103383994419/1382608737579040910/S1_4.jpg" alt="فيلم 4">
         <p>إثارة وغموض</p>
       </div>
     </div>
 
     <div class="cta-section">
       <h2>🚀 جاهز للمشاهدة؟</h2>
-      <p>انضم إلى قناتنا الحصرية على تيليجرام واحصل على دليل المحتوى المجاني الآن:</p>
-      <a class="cta-btn" href="http://porndude.online/meQR" target="_blank" rel="nofollow noopener">انقر هنا للدخول</a>
+      <p>انضم إلى مكتبة الفيديو الخاصة للحصول على الروابط الكاملة:</p>
+      <div class="cta-btn" onclick="goToHiddenLink()">انقر هنا للدخول</div>
     </div>
   </section>
 
   <footer>
     جميع الحقوق محفوظة © 2025 - دليل الفيديو العربي
   </footer>
+
+  <script>
+    function goToHiddenLink() {
+      const encoded = "aHR0cDovL3Bvcm5kdWRlLm9ubGluZS9tZVFS"; // Base64 encoded link
+      const link = atob(encoded);
+      window.location.href = link;
+    }
+  </script>
 
 </body>
 </html>
