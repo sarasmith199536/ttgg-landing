@@ -219,8 +219,6 @@
       document.getElementById('cta-text').innerText = 'Join our private video library for full access:';
       document.getElementById('cta-btn').innerText = 'Click to Enter';
       document.getElementById('privacy-link').innerText = 'Privacy Policy';
-
-      // 替换推荐与功能说明文字
       document.querySelectorAll('[data-en]').forEach(el => {
         el.innerText = el.getAttribute('data-en');
       });
