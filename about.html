@@ -1,0 +1,47 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من نحن / About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-color: #f9fafb;
+      color: #1f2937;
+      padding: 20px;
+      direction: rtl;
+    }
+    h1 {
+      font-size: 26px;
+      color: #0f172a;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 600px) {
+      body { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <h1 id="title">من نحن</h1>
+  <p id="text">نحن فريق متحمس يهدف إلى تقديم أفضل محتوى فيديو مجاني باللغة العربية، بجودة عالية وبدون إعلانات مزعجة. نسعى إلى تزويد المستخدمين بتجربة مشاهدة ممتعة وآمنة.</p>
+
+  <script>
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith('en')) {
+      document.documentElement.lang = 'en';
+      document.documentElement.dir = 'ltr';
+      document.getElementById("title").textContent = "About Us";
+      document.getElementById("text").textContent = "We are a passionate team committed to providing high-quality, ad-free Arabic video content. Our mission is to offer a safe and enjoyable viewing experience for all users.";
+    }
+  </script>
+</body>
+</html>
