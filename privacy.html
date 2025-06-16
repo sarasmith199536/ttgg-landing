@@ -1,42 +1,98 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <title>سياسة الخصوصية</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Cairo', sans-serif;
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-      line-height: 1.8;
-      background: #f9f9f9;
-      color: #111;
-      direction: rtl;
-    }
-    h1 {
-      color: #007baf;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    p {
-      margin-bottom: 14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+            direction: rtl;
+        }
+        .lang-switch {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="lang-switch">
+        <button onclick="switchLang('ar')">العربية</button>
+        <button onclick="switchLang('en')">English</button>
+    </div>
 
-  <h1>سياسة الخصوصية</h1>
+    <div id="content-ar">
+        <h1>سياسة الخصوصية</h1>
+        <p><strong>تاريخ السريان:</strong> 04/07/2025</p>
+        <p>مرحبًا بك في موقعنا!</p>
+        <p>تصف هذه السياسة كيفية جمعنا لمعلوماتك الشخصية ومعالجتها، واستخدامها ومشاركتها عند استخدامك لخدماتنا. نحن نحرص على حماية بياناتك ونستخدمها فقط بما يتوافق مع هذه السياسة.</p>
+        <h2>1. المعلومات التي نجمعها</h2>
+        <p>نقوم بجمع معلوماتك عند تسجيلك في الخدمة، عند استخدام الميزات مثل الروبوتات الذكية أو التحليل الغذائي أو التواصل معنا.</p>
+        <h2>2. كيفية استخدام المعلومات</h2>
+        <p>نستخدم بياناتك لتقديم الخدمات، وتحسين الأداء، وإرسال الإشعارات، والرد على استفساراتك.</p>
+        <h2>3. مشاركة المعلومات</h2>
+        <p>نشارك معلوماتك مع شركاء موثوقين لتقديم الدعم الفني، والامتثال للقوانين، ووفق الحاجة القانونية.</p>
+        <h2>4. حقوقك</h2>
+        <p>لديك الحق في الوصول إلى بياناتك وتصحيحها أو حذفها، كما يمكنك الاعتراض على استخدامنا لها أو تقديم شكوى للسلطات.</p>
+        <h2>5. حماية القُصَّر</h2>
+        <p>إذا كنت دون السن القانونية، يجب أن يوافق ولي أمرك على استخدامك للخدمة.</p>
+        <h2>6. اتصل بنا</h2>
+        <p>إذا كان لديك أي استفسار بخصوص سياسة الخصوصية، يمكنك مراسلتنا على البريد الإلكتروني: <strong>your-email@example.com</strong></p>
+    </div>
 
-  <p>نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. لا نقوم بجمع أو تخزين أو مشاركة أي معلومات شخصية من زوار هذا الموقع.</p>
+    <div id="content-en" style="display:none; direction: ltr;">
+        <h1>Privacy Policy</h1>
+        <p><strong>Effective Date:</strong> 04/07/2025</p>
+        <p>Welcome to our website!</p>
+        <p>This policy describes how we collect, process, use, and share your personal data when using our services. We are committed to protecting your data and using it in accordance with this policy.</p>
+        <h2>1. Information We Collect</h2>
+        <p>We collect your data during registration, while using features like AI tools, dietary analysis, or when contacting us.</p>
+        <h2>2. How We Use Your Data</h2>
+        <p>We use your data to provide services, improve performance, send notifications, and respond to inquiries.</p>
+        <h2>3. Sharing Your Information</h2>
+        <p>We may share your data with trusted partners for tech support, legal compliance, and necessary disclosures.</p>
+        <h2>4. Your Rights</h2>
+        <p>You have the right to access, correct, delete your data, object to our use, or file complaints to authorities.</p>
+        <h2>5. Protecting Minors</h2>
+        <p>If you are under the legal age, parental or guardian consent is required before using the service.</p>
+        <h2>6. Contact Us</h2>
+        <p>If you have questions about this privacy policy, contact us at: <strong>your-email@example.com</strong></p>
+    </div>
 
-  <p>جميع الروابط والمواد المقدمة هي لأغراض إعلامية فقط، ولا تتطلب أي تسجيل أو تقديم معلومات شخصية.</p>
+    <script>
+        function switchLang(lang) {
+            if (lang === 'en') {
+                document.getElementById('content-ar').style.display = 'none';
+                document.getElementById('content-en').style.display = 'block';
+                document.documentElement.lang = 'en';
+                document.documentElement.dir = 'ltr';
+            } else {
+                document.getElementById('content-en').style.display = 'none';
+                document.getElementById('content-ar').style.display = 'block';
+                document.documentElement.lang = 'ar';
+                document.documentElement.dir = 'rtl';
+            }
+        }
 
-  <p>إذا كنت بحاجة إلى أي استفسار أو لديك ملاحظات بخصوص سياسة الخصوصية، يمكنك التواصل معنا عبر القنوات الرسمية.</p>
-
-  <p>بتصفحك لهذا الموقع، فإنك توافق على شروط سياسة الخصوصية هذه.</p>
-
+        window.addEventListener('DOMContentLoaded', () => {
+            const userLang = navigator.language || navigator.userLanguage;
+            if (userLang.startsWith('en')) {
+                switchLang('en');
+            } else {
+                switchLang('ar');
+            }
+        });
+    </script>
 </body>
 </html>
