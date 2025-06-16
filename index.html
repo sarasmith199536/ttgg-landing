@@ -44,7 +44,7 @@
       position: relative;
       width: 100%;
       padding-top: 56.25%;
-      background: #000 url('https://raw.githubusercontent.com/sarasmith199536/ttgg-landing/main/Player1/F/F1.jpg') center/cover no-repeat;
+      background: #000 url('https://sarasmith199536.github.io/ttgg-landing/Player1/F/F1.jpg') center/cover no-repeat;
       border-radius: 16px;
       margin-bottom: 30px;
     }
@@ -123,107 +123,102 @@
       font-size: 13px;
       color: #6b7280;
     }
-    footer a {
+    .footer-links {
+      margin-top: 10px;
+    }
+    .footer-links a {
+      margin: 0 10px;
       color: #00bcd4;
-      text-decoration: underline;
+      text-decoration: none;
     }
     @media (max-width: 600px) {
       .feature-card {
         flex: 1 1 100%;
       }
     }
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 20px;
-      }
-      header p {
-        font-size: 14px;
-      }
-      .cta-btn {
-        font-size: 16px;
-        padding: 12px 24px;
-      }
-      .recommendation img {
-        height: 80px;
-      }
-    }
   </style>
 </head>
 <body>
-
   <header>
-    <img class="hero-img" src="https://raw.githubusercontent.com/sarasmith199536/ttgg-landing/main/Player1/Top/Top1.1.jpg" alt="صورة امرأة عربية">
+    <img class="hero-img" src="https://sarasmith199536.github.io/ttgg-landing/Player1/Top/Top1.1.jpg" alt="صورة امرأة عربية">
     <h1 id="main-title">📽️ مكتبة الفيديو العربي المجاني</h1>
-    <p id="sub-title">اكتشف أفضل محتوى فيديو مجاني باللغة العربية، بلا إعلانات مزعجة</p>
+    <p id="subtitle">اكتشف أفضل محتوى فيديو مجاني باللغة العربية، بلا إعلانات مزعجة</p>
   </header>
 
   <section class="main">
     <div class="video-preview"></div>
 
-    <h2 class="section-title" id="offer-title">ما الذي نقدمه؟</h2>
+    <h2 class="section-title" id="section-title">ما الذي نقدمه؟</h2>
     <div class="features">
-      <div class="feature-card" data-en="High-quality movies and series">أفلام ومسلسلات بجودة عالية</div>
-      <div class="feature-card" data-en="Direct & safe download links">روابط تحميل مباشرة وآمنة</div>
-      <div class="feature-card" data-en="Ad-free viewing experience">مشاهدة بدون إعلانات مزعجة</div>
-      <div class="feature-card" data-en="Daily updates of new releases">تحديثات يومية لأحدث الإصدارات</div>
+      <div class="feature-card" id="f1">أفلام ومسلسلات بجودة عالية</div>
+      <div class="feature-card" id="f2">روابط تحميل مباشرة وآمنة</div>
+      <div class="feature-card" id="f3">مشاهدة بدون إعلانات مزعجة</div>
+      <div class="feature-card" id="f4">تحديثات يومية لأحدث الإصدارات</div>
     </div>
 
-    <h2 class="section-title" id="suggest-title">📺 اقتراحات للمشاهدة</h2>
+    <h2 class="section-title" id="suggestion">📺 اقتراحات للمشاهدة</h2>
     <div class="recommendations">
       <div class="recommendation">
-        <img src="https://raw.githubusercontent.com/sarasmith199536/ttgg-landing/main/Player1/S/S1.jpg" alt="فيلم 1">
-        <p data-en="A special drama movie">فيلم درامي مميز</p>
+        <img src="https://sarasmith199536.github.io/ttgg-landing/Player1/S/S1.jpg" alt="فيلم 1">
+        <p>فيلم درامي مميز</p>
       </div>
       <div class="recommendation">
-        <img src="https://raw.githubusercontent.com/sarasmith199536/ttgg-landing/main/Player1/S/S2.jpg" alt="فيلم 2">
-        <p data-en="A thrilling series">مسلسل مشوق</p>
+        <img src="https://sarasmith199536.github.io/ttgg-landing/Player1/S/S2.jpg" alt="فيلم 2">
+        <p>مسلسل مشوق</p>
       </div>
       <div class="recommendation">
-        <img src="https://raw.githubusercontent.com/sarasmith199536/ttgg-landing/main/Player1/S/S4.jpg" alt="فيلم 3">
-        <p data-en="Family comedy">كوميديا عائلية</p>
+        <img src="https://sarasmith199536.github.io/ttgg-landing/Player1/S/S4.jpg" alt="فيلم 3">
+        <p>كوميديا عائلية</p>
       </div>
       <div class="recommendation">
-        <img src="https://raw.githubusercontent.com/sarasmith199536/ttgg-landing/main/Player1/S/S3.jpg" alt="فيلم 4">
-        <p data-en="Mystery and suspense">إثارة وغموض</p>
+        <img src="https://sarasmith199536.github.io/ttgg-landing/Player1/S/S3.jpg" alt="فيلم 4">
+        <p>إثارة وغموض</p>
       </div>
     </div>
 
     <div class="cta-section">
       <h2 id="cta-title">🚀 جاهز للمشاهدة؟</h2>
-      <p id="cta-text">انضم إلى مكتبة الفيديو الخاصة للحصول على الروابط الكاملة:</p>
+      <p id="cta-desc">انضم إلى مكتبة الفيديو الخاصة للحصول على الروابط الكاملة:</p>
       <div class="cta-btn" onclick="goToHiddenLink()" id="cta-btn">انقر هنا للدخول</div>
     </div>
   </section>
 
   <footer>
-    جميع الحقوق محفوظة © 2025 - دليل الفيديو العربي | <a href="privacy.html" id="privacy-link">سياسة الخصوصية</a>
+    <div id="footer-text">جميع الحقوق محفوظة © 2025 - دليل الفيديو العربي</div>
+    <div class="footer-links">
+      <a href="/ttgg-landing/privacy.html" id="privacy">سياسة الخصوصية</a>
+      <a href="/ttgg-landing/about.html" id="about">من نحن</a>
+      <a href="/ttgg-landing/contact.html" id="contact">اتصل بنا</a>
+    </div>
   </footer>
 
   <script>
     function goToHiddenLink() {
-      const encoded = "aHR0cDovL3Bvcm5kdWRlLm9ubGluZS9tZVFS";
+      const encoded = "aHR0cDovL3Bvcm5kdWRlLm9ubGluZS9tZVFS"; // base64 encoded link
       const link = atob(encoded);
       window.location.href = link;
     }
 
-    // 自动检测语言并切换为英文（如适用）
-    const userLang = navigator.language || navigator.userLanguage;
-    if (userLang.startsWith('en')) {
+    const lang = navigator.language || navigator.userLanguage;
+    if (lang.startsWith('en')) {
       document.documentElement.lang = 'en';
       document.documentElement.dir = 'ltr';
-      document.getElementById('main-title').innerText = '📽️ Free Arabic Video Library';
-      document.getElementById('sub-title').innerText = 'Discover top free Arabic video content with no annoying ads';
-      document.getElementById('offer-title').innerText = 'What do we offer?';
-      document.getElementById('suggest-title').innerText = '📺 Recommended for you';
-      document.getElementById('cta-title').innerText = '🚀 Ready to Watch?';
-      document.getElementById('cta-text').innerText = 'Join our private video library for full access:';
-      document.getElementById('cta-btn').innerText = 'Click to Enter';
-      document.getElementById('privacy-link').innerText = 'Privacy Policy';
-      document.querySelectorAll('[data-en]').forEach(el => {
-        el.innerText = el.getAttribute('data-en');
-      });
+      document.getElementById("main-title").textContent = "📽️ Free Arabic Video Library";
+      document.getElementById("subtitle").textContent = "Discover top-quality Arabic video content without annoying ads";
+      document.getElementById("section-title").textContent = "What We Offer";
+      document.getElementById("f1").textContent = "High-quality movies & series";
+      document.getElementById("f2").textContent = "Safe and direct download links";
+      document.getElementById("f3").textContent = "Watch without ads";
+      document.getElementById("f4").textContent = "Daily updates of new releases";
+      document.getElementById("suggestion").textContent = "📺 Watch Recommendations";
+      document.getElementById("cta-title").textContent = "🚀 Ready to Watch?";
+      document.getElementById("cta-desc").textContent = "Join our private video library and get full access:";
+      document.getElementById("cta-btn").textContent = "Click to Enter";
+      document.getElementById("footer-text").textContent = "All rights reserved © 2025 - Arabic Video Guide";
+      document.getElementById("privacy").textContent = "Privacy Policy";
+      document.getElementById("about").textContent = "About Us";
+      document.getElementById("contact").textContent = "Contact Us";
     }
   </script>
-
 </body>
 </html>
