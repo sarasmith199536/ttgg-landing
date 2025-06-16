@@ -1,4 +1,3 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -12,27 +11,66 @@
       font-family: 'Cairo', sans-serif;
       background-color: #f9fafb;
       color: #1f2937;
-      padding: 20px;
+      padding: 30px 20px;
       direction: rtl;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
     }
     h1 {
-      font-size: 26px;
+      font-size: 28px;
       color: #0f172a;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    h2 {
+      font-size: 20px;
+      color: #007baf;
+      margin-top: 30px;
+      margin-bottom: 10px;
     }
     p {
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.7;
       margin-bottom: 16px;
     }
+    ul {
+      padding-right: 20px;
+      margin-bottom: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
     @media (max-width: 600px) {
-      body { padding: 15px; }
+      body { padding: 20px 15px; }
     }
   </style>
 </head>
 <body>
   <h1 id="title">من نحن</h1>
-  <p id="text">نحن فريق متحمس يهدف إلى تقديم أفضل محتوى فيديو مجاني باللغة العربية، بجودة عالية وبدون إعلانات مزعجة. نسعى إلى تزويد المستخدمين بتجربة مشاهدة ممتعة وآمنة.</p>
+
+  <h2 id="who">من نحن</h2>
+  <p id="who-text">
+    نحن شركة مبتكرة تدمج نماذج الذكاء الاصطناعي المتقدمة في الحياة والعمل اليومي. نهدف إلى تطوير أدوات ذكاء اصطناعي سهلة الاستخدام تساعد الجميع على الاستفادة من أحدث التقنيات.
+  </p>
+
+  <h2 id="what">ماذا تقدم تطبيقاتنا؟</h2>
+  <ul id="features">
+    <li><strong>تحليل الطعام:</strong> التقط صورة لوجبتك واحصل فورًا على معلومات السعرات الحرارية والقيم الغذائية.</li>
+    <li><strong>التخطيط الذكي:</strong> احصل على خطط غذائية مخصصة حسب أهدافك الصحية.</li>
+    <li><strong>كيف يعمل:</strong> نعتمد على المسح البصري وتقنية RAG التي تجمع بين التعرف البصري واسترجاع البيانات الذكية.</li>
+    <li><strong>الميزة الرئيسية:</strong> أبسط من التطبيقات الأخرى – لا حاجة لتسجيل يدوي، فقط التقط الصورة واحصل على نصائح معتمدة علميًا.</li>
+  </ul>
+
+  <h2 id="contact">كيفية التواصل معنا</h2>
+  <p id="contact-text">
+    لأي استفسارات متعلقة بالخدمة أو ملاحظات أو شكاوى، يرجى التواصل معنا عبر البريد الإلكتروني:
+    <a href="mailto:feedback@sparkling-inc.com">feedback@sparkling-inc.com</a>
+  </p>
 
   <script>
     const lang = navigator.language || navigator.userLanguage;
@@ -40,7 +78,16 @@
       document.documentElement.lang = 'en';
       document.documentElement.dir = 'ltr';
       document.getElementById("title").textContent = "About Us";
-      document.getElementById("text").textContent = "We are a passionate team committed to providing high-quality, ad-free Arabic video content. Our mission is to offer a safe and enjoyable viewing experience for all users.";
+      document.getElementById("who").textContent = "Who We Are";
+      document.getElementById("who-text").textContent = "Sparkling is an innovative company integrating advanced AI models into everyday life and work. We create easy-to-use AI tools to help everyone benefit from the latest technology.";
+      document.getElementById("what").textContent = "What does our application provide?";
+      document.getElementById("features").innerHTML = `
+        <li><strong>Food Analysis:</strong> Take a photo of your meal to instantly get calorie counts and nutrition details.</li>
+        <li><strong>Smart Planning:</strong> Get personalized diet plans based on your health goals.</li>
+        <li><strong>How It Works:</strong> Uses camera scanning + RAG technology (combines visual recognition with smart data retrieval).</li>
+        <li><strong>Key Advantage:</strong> Simpler than other apps – less manual logging, just snap and get science-backed advice.</li>`;
+      document.getElementById("contact").textContent = "How to contact us";
+      document.getElementById("contact-text").innerHTML = `For assistance with any service-related questions, complaints, or claims, please contact our support team at <a href='mailto:feedback@sparkling-inc.com'>feedback@sparkling-inc.com</a>`;
     }
   </script>
 </body>
