@@ -64,6 +64,23 @@
       height: 60px;
       cursor: pointer;
     }
+    .cta-btn {
+      display: inline-block;
+      background-color: #00bcd4;
+      color: white;
+      font-size: 18px;
+      padding: 14px 30px;
+      border: none;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .cta-btn:hover {
+      background-color: #0097a7;
+    }
     .section-title {
       font-size: 22px;
       margin-bottom: 20px;
@@ -116,23 +133,6 @@
       padding: 30px 20px;
       border-radius: 16px;
     }
-    .cta-btn {
-      display: inline-block;
-      background-color: #00bcd4;
-      color: white;
-      font-size: 18px;
-      padding: 14px 30px;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      margin-top: 10px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-    .cta-btn:hover {
-      background-color: #0097a7;
-    }
     footer {
       text-align: center;
       padding: 20px;
@@ -171,6 +171,7 @@
         <a href="https://play.google.com/store/apps/details?id=com.hdvideo.player.offline" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
         </a>
+        <div class="cta-btn" onclick="goToHiddenLink()" id="cta-btn">انقر هنا للدخول</div>
       </div>
     </div>
 
@@ -200,12 +201,6 @@
         <img src="https://sarasmith199536.github.io/ttgg-landing/Player1/S/S3.jpg" alt="فيلم 4">
         <p>إثارة وغموض</p>
       </div>
-    </div>
-
-    <div class="cta-section">
-      <h2 id="cta-title">🚀 جاهز للمشاهدة؟</h2>
-      <p id="cta-desc">انضم إلى مكتبة الفيديو الخاصة للحصول على الروابط الكاملة:</p>
-      <div class="cta-btn" onclick="goToHiddenLink()" id="cta-btn">انقر هنا للدخول</div>
     </div>
   </section>
 
@@ -237,8 +232,6 @@
       document.getElementById("f3").textContent = "Watch without ads";
       document.getElementById("f4").textContent = "Daily updates of new releases";
       document.getElementById("suggestion").textContent = "📺 Watch Recommendations";
-      document.getElementById("cta-title").textContent = "🚀 Ready to Watch?";
-      document.getElementById("cta-desc").textContent = "Join our private video library and get full access:";
       document.getElementById("cta-btn").textContent = "Click to Enter";
       document.getElementById("footer-text").textContent = "All rights reserved © 2025 - Arabic Video Guide";
       document.getElementById("privacy").textContent = "Privacy Policy";
