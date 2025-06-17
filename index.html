@@ -81,6 +81,28 @@
     .cta-btn:hover {
       background-color: #0097a7;
     }
+    .download-hint {
+      margin-top: 20px;
+      text-align: right;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      gap: 12px;
+      direction: rtl;
+    }
+    .arrow-icon {
+      width: 40px;
+      height: auto;
+    }
+    .hint-text {
+      font-size: 14px;
+      color: #1f2937;
+    }
+    .hint-text strong {
+      display: block;
+      color: #111;
+      font-size: 16px;
+    }
     .section-title {
       font-size: 22px;
       margin-bottom: 20px;
@@ -172,34 +194,13 @@
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Get it on Google Play">
         </a>
         <div class="cta-btn" onclick="goToHiddenLink()" id="cta-btn">انقر هنا للدخول</div>
-      </div>
-    </div>
-
-    <h2 class="section-title" id="section-title">ما الذي نقدمه؟</h2>
-    <div class="features">
-      <div class="feature-card" id="f1">أفلام ومسلسلات بجودة عالية</div>
-      <div class="feature-card" id="f2">روابط تحميل مباشرة وآمنة</div>
-      <div class="feature-card" id="f3">مشاهدة بدون إعلانات مزعجة</div>
-      <div class="feature-card" id="f4">تحديثات يومية لأحدث الإصدارات</div>
-    </div>
-
-    <h2 class="section-title" id="suggestion">📺 اقتراحات للمشاهدة</h2>
-    <div class="recommendations">
-      <div class="recommendation">
-        <img src="https://sarasmith199536.github.io/ttgg-landing/Player1/S/S1.jpg" alt="فيلم 1">
-        <p>فيلم درامي مميز</p>
-      </div>
-      <div class="recommendation">
-        <img src="https://sarasmith199536.github.io/ttgg-landing/Player1/S/S2.jpg" alt="فيلم 2">
-        <p>مسلسل مشوق</p>
-      </div>
-      <div class="recommendation">
-        <img src="https://sarasmith199536.github.io/ttgg-landing/Player1/S/S4.jpg" alt="فيلم 3">
-        <p>كوميديا عائلية</p>
-      </div>
-      <div class="recommendation">
-        <img src="https://sarasmith199536.github.io/ttgg-landing/Player1/S/S3.jpg" alt="فيلم 4">
-        <p>إثارة وغموض</p>
+        <div class="download-hint">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Curved_arrow_left.svg/120px-Curved_arrow_left.svg.png" alt="arrow" class="arrow-icon">
+          <div class="hint-text">
+            <strong id="hint-main">احصل على التطبيق الآن</strong>
+            <span id="hint-sub">انقر للتحميل أو المشاهدة</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -226,17 +227,13 @@
       document.documentElement.dir = 'ltr';
       document.getElementById("main-title").textContent = "📽️ Free Arabic Video Library";
       document.getElementById("subtitle").textContent = "Discover top-quality Arabic video content without annoying ads";
-      document.getElementById("section-title").textContent = "What We Offer";
-      document.getElementById("f1").textContent = "High-quality movies & series";
-      document.getElementById("f2").textContent = "Safe and direct download links";
-      document.getElementById("f3").textContent = "Watch without ads";
-      document.getElementById("f4").textContent = "Daily updates of new releases";
-      document.getElementById("suggestion").textContent = "📺 Watch Recommendations";
       document.getElementById("cta-btn").textContent = "Click to Enter";
       document.getElementById("footer-text").textContent = "All rights reserved © 2025 - Arabic Video Guide";
       document.getElementById("privacy").textContent = "Privacy Policy";
       document.getElementById("about").textContent = "About Us";
       document.getElementById("contact").textContent = "Contact Us";
+      document.getElementById("hint-main").textContent = "Get the app now";
+      document.getElementById("hint-sub").textContent = "Tap to download or watch";
     }
   </script>
 </body>
